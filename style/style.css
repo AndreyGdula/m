@@ -42,6 +42,7 @@ h1 {
 
 #papel {
     height: 70vh;
+    max-width: 98vw;
 }
 
 .material-symbols-outlined {

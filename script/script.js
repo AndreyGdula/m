@@ -1,10 +1,11 @@
 document.getElementById('letter').addEventListener('click', openEnvelope);
+Array.from(document.getElementsByClassName('material-symbols-outlined')).forEach(element => {
+    element.addEventListener('click', closeLetter);
+});
 
 function openEnvelope() {
     const envelope = document.getElementById('letter');
-    const papel = document.querySelector("div.papel")
-    
-
+    const papel = document.querySelector("div.papel");
 
     let frame = 1;
     const totalFrames = 10; // Número total de frames na animação
@@ -19,4 +20,9 @@ function openEnvelope() {
             frame++;
         }
     }, frameInterval);
+}
+
+function closeLetter() {
+    const papel = document.querySelector("div.papel");
+    papel.style.display = 'none';
 }

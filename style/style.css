@@ -43,3 +43,11 @@ h1 {
 #papel {
     height: 70vh;
 }
+
+.material-symbols-outlined {
+    user-select: none;
+}
+
+.material-symbols-outlined:hover {
+    cursor: pointer;
+}

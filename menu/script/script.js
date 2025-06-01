@@ -1,10 +1,10 @@
-window.addEventListener('load', () => {
+window.onload = () => {
   const splash = document.getElementById('splash-screen');
   const main = document.getElementById('main-content');
   const particles = document.getElementById('particles')
-  const timeout = 2000
+  const papiro = document.getElementById('papiro')
+  const timeout = 500
 
-  // Espera 2 segundos (ou o tempo que quiser)
   setTimeout(() => {
     splash.classList.add('fade-out');
     
@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
       splash.style.display = 'none';
       particles.style.display = 'block'
       main.style.display = 'block';
+      papiro.classList.add('visible')
     }, 800);
   }, timeout);
-});
+};

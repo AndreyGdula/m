@@ -1,24 +1,24 @@
 particlesJS('particles', {
   particles: {
     number: {
-      value: 120, // Quantidade de partículas
+      value: 80, // Quantidade de partículas
       density: {
         enable: true,
-        value_area: 1000
+        value_area: 800
       }
     },
     color: {
       value: "#D4AF37" // Cor das partículas
     },
     shape: {
-      type: "circle", // Pode ser circle, edge, triangle, etc
+      type: "circle",
     },
     opacity: {
       value: 0.8,
       random: true
     },
     size: {
-      value: 1.5,
+      value: 4,
       random: true
     },
     line_linked: {
@@ -26,7 +26,7 @@ particlesJS('particles', {
     },
     move: {
       enable: true,
-      speed: 5,
+      speed: 8,
       direction: "none",
       out_mode: "out"
     }

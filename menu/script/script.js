@@ -17,3 +17,37 @@ window.onload = () => {
     }, 800);
   }, timeout);
 };
+
+const fotos = [
+  "img/fotos/moldura0.png",
+  "img/fotos/moldura1.png",
+  "img/fotos/moldura2.png",
+  "img/fotos/moldura3.png",
+  "img/fotos/moldura4.png",
+  "img/fotos/moldura5.png",
+  "img/fotos/moldura6.png",
+  "img/fotos/moldura7.png",
+  "img/fotos/moldura8.png",
+  "img/fotos/moldura9.png",
+  "img/fotos/moldura10.png",
+]
+
+fotos.forEach(src => {
+  const img = new Image()
+  img.src = src
+})
+
+let indice = 0;
+const moldura =  document.querySelector("img#moldura-branco")
+const btn = document.getElementById("btn-moldura")
+
+if (moldura && btn) {
+  btn.addEventListener('click', () => {
+    indice = (indice + 1) % fotos.length
+    moldura.src = fotos[indice]
+
+    moldura.classList.remove('shake')
+    void moldura.offsetWidth
+    moldura.classList.add('shake')
+  })
+}

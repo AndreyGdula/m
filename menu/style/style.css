@@ -44,16 +44,16 @@ img#splash-img {
     z-index: -1;
     top: 0;
     left: 0;
-    background-image: url("../img/sky.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 body {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    background-image: url("../img/sky.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 h1 {
@@ -95,14 +95,85 @@ p {
 
 #papiro {
   height: 60vh;
-  margin: 0 auto;
+  margin: auto;
+  margin-bottom: 300px;
   opacity: 0;
   animation: revelarCarta 0.8s ease-out forwards;
   animation-delay: 0.5s;
 }
 
 #chapeu-seletor {
-    max-width: 70vw;
-    margin-top: 100px;
-    text-align: left;
+  width: 90vw;
+  max-width: 600px;
+  margin: 0px 20px;
+  text-align: left;
+  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.384));
+}
+
+#div-seletor {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+
+.choice {
+  background-color: transparent;
+  margin: auto;
+  border: none;
+}
+
+@keyframes balancarMoldura {
+  0%   { transform: rotate(-8deg); }
+  20%  { transform: rotate(-4deg); }
+  50%  { transform: rotate(8deg); }
+  80%  { transform: rotate(4deg); }
+  100% { transform: rotate(-8deg); }
+}
+
+#moldura-vazia {
+  width: 300px;
+  animation: balancarMoldura 2s infinite ease-in-out;
+  transform-origin: 50% 10%;
+}
+
+#moldura-body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#moldura-branco {
+  width: 90vw;
+}
+
+#btn-moldura {
+  background-color: transparent;
+  border: none;
+}
+
+@keyframes shakeMoldura {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-10deg); }
+  40% { transform: rotate(10deg); }
+  60% { transform: rotate(-8deg); }
+  80% { transform: rotate(8deg); }
+  100% { transform: rotate(0deg); }
+}
+
+#moldura-branco.shake {
+  animation: shakeMoldura 0.4s;
+}
+
+#btn-back {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+span {
+  color: white;
 }
